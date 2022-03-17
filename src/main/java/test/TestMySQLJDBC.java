@@ -15,6 +15,9 @@ public class TestMySQLJDBC {
                 System.out.println("Id Persona" + resultado.getInt("id_personas"));
                 System.out.println("Nombre: " + resultado.getString("nombre"));
             }
+            resultado.close();
+            instruccion.close();
+            conexion.close();
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
         }
